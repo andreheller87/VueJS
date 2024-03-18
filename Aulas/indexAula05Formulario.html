@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+
+        <label for="">Nome:</label> <br>
+        <input type="text" v-model="nome"><br>
+
+        <label for="">Telefone:</label> <br>
+        <input type="text" v-model="telefone"><br>
+
+        <label for="">Deseja receber nossas Novidades?</label> <br>
+        <input type="radio" value="Sim" v-model="novidade">Sim <br>
+        <input type="radio" value="Não" v-model="novidade">Não <br>
+
+        <label for="">Interesses:</label> <br>
+        <input type="checkbox" value="Java" v-model="interesses">Java <br>
+        <input type="checkbox" value="Python" v-model="interesses">Python <br>
+        <input type="checkbox" value="C#" v-model="interesses">C# <br>
+        <br><br>
+
+        <label for="">Como nos conheceu?</label> <br>
+        <select v-model="conheceu">
+            <option value="">Escolha</option>
+            <option value="Google">Google</option>
+            <option value="Linkdin">Linkdin</option>
+            <option value="Facebook">Facebook</option>
+
+        </select>
+        <br><br>
+
+        <button>Enviar</button>
+
+        <hr><br>
+        <hr>
+
+        Nome:{{nome}} <br>
+        Telefone: {{telefone}} <br>
+        Novidades: {{novidade}}<br>
+        Interesses:{{interesses}} <br>
+        Como nos conheceu? {{conheceu}}
+
+
+        <hr><br>
+        <hr>
+
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Model",
+                nome: "",
+                telefone: "",
+                novidade: "",
+                interesses: [],
+                conheceu: "",
+            }
+        });
+    </script>
+</body>
+
+</html>
