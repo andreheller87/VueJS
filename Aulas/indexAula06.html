@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style media="screen">
+        .red{
+            color:red
+        }
+        .green{
+            color:green
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1 v-if="status">{{titulo}}</h1>
+
+        <img v-bind:src="imagem" alt="">
+        <p :class="classe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem excepturi velit deleniti,
+            voluptatem nihil amet maiores deserunt ducimus necessitatibus accusamus, repellat distinctio eum labore quae
+            ad alias quia aliquid placeat.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                status: true,
+                titulo: "Curso de VueJS",
+                imagem: "https://th.bing.com/th/id/OIP.GxExK88wgr_8hbuqu4JfAAHaEK?rs=1&pid=ImgDetMain",
+                classe:"green",
+            }
+        })
+    </script>
+</body>
+
+</html>
